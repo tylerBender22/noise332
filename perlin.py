@@ -38,7 +38,8 @@ class Perlin2D:
 
         if seed is None:
             self._seed = np.random.randint(-2147483648, 2147483647)
-        random = np.random.RandomState(seed)
+        else:   self._seed = seed
+        random = np.random.RandomState(self._seed)
 
         _gradients = np.array([[self.randomGradient(random) for _ in range(self.size + 1)] for _ in range(self.size + 1)])
         self.noise = np.zeros((self.size, self.size))
