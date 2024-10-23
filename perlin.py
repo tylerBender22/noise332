@@ -72,8 +72,7 @@ class Perlin2D:
         Generates a random normal gradient unit vector (2D) based on a seed.
 
         Parameters:
-        seed (int, optional): A seed for the random number generator. If None, 
-        it will use the current random state.
+        seed (int, optional): A RandomState based of seed.
 
         Returns:
         Vector2D: A random normal gradient unit vector with components in the range [-1, 1].

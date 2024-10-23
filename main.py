@@ -36,5 +36,5 @@ def _plotPerlin3D(perlin:perlin.Perlin2D):
 
 
 perl = perlin.Perlin2D(32, 332, interpolation.smootherstep)
-_plotPerlinCartesian(perl)
+#_plotPerlinCartesian(perl)
 _plotPerlin3D(perl)

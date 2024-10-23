@@ -103,18 +103,3 @@ class interpolation:
         x = max(-10, min(x, 10))
         return (1 / (1 + (math.pow(math.e, -x))))
 
-    def tanh(x):
-        """
-        Computes the hyperbolic tangent (tanh) of a given input.
-        
-        Parameters:
-        -----------
-        x : float
-            The input value for which the hyperbolic tangent is computed.
-        
-        Returns:
-        --------
-        float:
-            The result of the tanh function, a value between -1 and 1.
-        """
-        return (math.exp(x) - math.exp(-x)) / (math.exp(x) + math.exp(-x))
