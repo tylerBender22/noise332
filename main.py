@@ -1,13 +1,13 @@
 from matplotlib import pyplot as plt
 import numpy as np
-import perlin as perlin
-from interpolation import *
+import noise.perlin as perlin
+from noise.interpolation import *
 from scipy.ndimage import gaussian_filter
 
 
 def _plotPerlinCartesian(perlin:perlin.Perlin2D):
-    noise = gaussian_filter(perlin.noise, sigma=1) # smooth it out a bit
-    plt.imshow(noise, cmap='viridis')
+    #noise = gaussian_filter(perlin.noise, sigma=1) # smooth it out a bit
+    plt.imshow(perlin.noise, cmap='viridis')
     plt.colorbar()
     plt.title('Perlin Noise')
     plt.show()
@@ -35,6 +35,6 @@ def _plotPerlin3D(perlin:perlin.Perlin2D):
         plt.show()
 
 
-perl = perlin.Perlin2D(32, 332, interpolation.smootherstep)
-#_plotPerlinCartesian(perl)
-_plotPerlin3D(perl)
+
+perl = perlin.Perlin2D(16, 87692, interpolation.smootherstep, 1, 0.8, 0.3, False, 0.3)
+perl.doChunk(0, 0)
